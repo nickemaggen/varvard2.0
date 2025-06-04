@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vår Värd 2.0 - Uddevallahems nya intranät</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #1e40af;
+            --accent: #2563eb;
+            --light: #eff6ff;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.5);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .feature-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3182ce;
+            transform: translateY(-1px);
+        }
+        
+        .animate-delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .animate-delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .scroll-arrow {
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Logo -->
+    <div class="flex justify-center py-6 bg-gradient-to-r from-blue-900 to-blue-700">
+        <img src="https://i.ibb.co/ZVmtbzh/2.png" alt="Uddevallahem Logo" class="h-8">
+    </div>
+
+    <!-- New Hero Section -->
+    <div class="min-h-screen bg-gradient-to-r from-blue-900 to-blue-700 text-white flex items-center">
+        <div class="container mx-auto px-6 py-16 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+                    <span class="block">Nu är Vår Värd</span>
+                    <span class="text-blue-300">bättre än någonsin!</span>
+                </h1>
+                
+                <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed">
+                    Vi har lyssnat och skapat en helt ny upplevelse - enklare, tydligare och mer fokus på det som faktiskt behövs.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://uddevallahem.sharepoint.com/sites/Uddevallahem" class="btn-primary inline-block text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                        Till Vår Värd 2.0 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="mt-24">
+                    <div class="scroll-arrow text-white text-4xl opacity-80 hover:opacity-100 transition-opacity duration-200">
+                        <i class="fas fa-chevron-down" onclick="document.querySelector('#whats-new').scrollIntoView({ behavior: 'smooth' })"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What's New Section -->
+    <div id="whats-new">
+    <div class="bg-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-blue-900 mb-6">Här är vad som är nytt</h2>
+                <p class="text-xl text-gray-700 leading-relaxed">
+                    Vår Värd 2.0 är resultatet av era önskemål - vi har skalat ner, förenklat och fokuserat på det viktiga.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div class="flex items-start">
+                    <div class="text-blue-500 text-3xl mr-6">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Nytt utseende</h3>
+                        <p class="text-gray-700">En helt ny design med färre klick till det du behöver. Du ska nå allt du kan tänkas behöva direkt från startsidan. Mindre distraktioner, mer fokus.</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="text-blue-500 text-3xl mr-6">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Nedskalad information</h3>
+                        <p class="text-gray-700">Vi har tagit bort det som inte var relevant och bara förvirrade. Kortfattat och koncist.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-blue-500 text-3xl mr-6">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Nyheter i Teams</h3>
+                        <p class="text-gray-700">Företagsnyheter finns nu där du redan är - i Microsoft Teams. Färre kanaler att hålla koll på.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="text-blue-500 text-3xl mr-6">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Tydligare processer</h3>
+                        <p class="text-gray-700">Våra interna processer presenteras på ett tydligare sätt i det nya intranätet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Features Section -->
+    <div class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">En plattform byggd för framtiden</h2>
+                <p class="text-gray-600">Vår Värd 2.0 kombinerar enkelhet med kraftfulla funktioner för att stödja ditt dagliga arbete</p>
+            </div>
+             <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://uddevallahem.sharepoint.com/sites/Uddevallahem" class="btn-primary inline-block text-white font-bold py-4 px-10 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-lg">
+                        Till Vår Värd 2.0 <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            <br>
+            <br>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+         
+
+
+
+</body>
+</html>
