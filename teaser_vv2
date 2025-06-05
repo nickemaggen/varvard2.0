@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vår Värd 2.0 - Kommer snart!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #446f83;
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .countdown-box {
+            box-shadow: 0 10px 30px -10px rgba(0, 119, 182, 0.3);
+        }
+        
+        .countdown-number {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .transition-all-300 {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #b6a72b 0%, #d4c43d 100%);
+            box-shadow: 0 4px 15px -5px rgba(182, 167, 43, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px -3px rgba(0, 87, 179, 0.5);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="py-6 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="https://i.ibb.co/ZVmtbzh/2.png" alt="Uddevallahem logga" class="h-6 sm:h-8">
+                </div>
+                <a href="https://uddevallahem.omniacloud.net/start" class="btn-primary text-white px-6 py-2 rounded-full font-medium transition-all-300 flex items-center">
+                    <span>Nuvarande Vår Värd</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </header>
+        
+        <!-- Hero Section -->
+        <main class="flex-grow flex items-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto max-w-6xl text-center">
+                <div class="max-w-2xl mx-auto mb-8 sm:mb-12">
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-indigo-900">
+                        <span class="inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#b6a72b] to-[#d4c43d]">Vår Värd 2.0</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-white mb-8 leading-relaxed">
+                        En helt ny intranätupplevelse för Uddevallahem
+                    </p>
+                    <div class="w-full max-w-md mx-auto bg-white rounded-lg overflow-hidden countdown-box">
+                        <div class="py-6 px-4 bg-white text-gray-800">
+                            <h3 class="text-lg font-semibold mb-2">Lanseras om:</h3>
+                            <div class="grid grid-cols-4 gap-4">
+                                <div>
+                                    <div class="countdown-number text-3xl font-bold" id="days">00</div>
+                                    <div class="text-xs uppercase">Dagar</div>
+                                </div>
+                                <div>
+                                    <div class="countdown-number text-3xl font-bold" id="hours">00</div>
+                                    <div class="text-xs uppercase">Timmar</div>
+                                </div>
+                                <div>
+                                    <div class="countdown-number text-3xl font-bold" id="minutes">00</div>
+                                    <div class="text-xs uppercase">Minuter</div>
+                                </div>
+                                <div>
+                                    <div class="countdown-number text-3xl font-bold" id="seconds">00</div>
+                                    <div class="text-xs uppercase">Sekunder</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-12">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Vad är nytt i Vår Värd 2.0?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-4 rounded-lg hover:bg-[#f3f0d9] transition-all-300">
+                            <div class="text-[#b6a72b] text-4xl mb-3">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Ny design</h3>
+                            <p class="text-gray-600">En fräsch och modern design med fokus på användarvänlighet.</p>
+                        </div>
+                        <div class="p-4 rounded-lg hover:bg-blue-50 transition-all-300">
+                            <div class="text-[#b6a72b] text-4xl mb-3">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Skalbart</h3>
+                            <p class="text-gray-600">Förberett för smarta sökfunktioner och kraftfull AI-teknik.</p>
+                        </div>
+                        <div class="p-4 rounded-lg hover:bg-[#f3f0d9] transition-all-300">
+                            <div class="text-[#b6a72b] text-4xl mb-3">
+                                <i class="fas fa-filter"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Mer relevant</h3>
+                            <p class="text-gray-600">Vi har skalat ner informationen till det som verkligen är viktigt för dig.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <div class="text-lg text-white max-w-3xl mx-auto">
+                        <p>Den 16 juni 2025 släpper vi den helt nya versionen av Vår Värd - håll utkik!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="py-6 px-4 bg-gray-50">
+            <div class="container mx-auto text-center text-gray-500 text-sm">
+                <p>© 2025 Uddevallahem. Alla rättigheter reserverade.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Countdown timer
+        const countDownDate = new Date("Jun 16, 2025 00:00:00").getTime();
+        
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+        
+        // Animation for elements when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, {threshold: 0.1});
+        
+        document.querySelectorAll('.countdown-box, .max-w-3xl').forEach(el => {
+            observer.observe(el);
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+        });
+        
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.countdown-box, .max-w-3xl').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
